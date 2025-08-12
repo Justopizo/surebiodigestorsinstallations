@@ -1,0 +1,23 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    background-color: #007bff;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+footer {
+    margin-top: auto;
+}
