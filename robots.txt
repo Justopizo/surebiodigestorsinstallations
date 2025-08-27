@@ -1,0 +1,13 @@
+# robots.txt for surebiodigestersinstallers.co.ke
+
+User-agent: *
+Allow: /
+
+# Disallow unnecessary system or sensitive files (if any exist)
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.surebiodigestersinstallers.co.ke/sitemap.xml

@@ -7,6 +7,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxvA5nZ/0fyAqifcw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <style>
+        .service-details {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .service-features {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .service-features ul {
+            padding-left: 20px;
+        }
+        .benefits-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .benefits-list li {
+            padding-left: 2em;
+            text-indent: -1.5em;
+            margin-bottom: 10px;
+        }
+        .benefits-list li:before {
+            content: "✓";
+            color: #28a745;
+            padding-right: 0.5em;
+        }
+        #services-article {
+            background-color: #f8f9fa;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -18,12 +56,17 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="biodigester.html">Biodigester Installation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="waste.html">Waste Management</a></li>
-                    <li class="nav-item"><a class="nav-link" href="constructions.html">General Constructions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="plumbing.html">Plumbing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="drainage.html">Drainage</a></li>
-                    <li class="nav-item"><a class="nav-link" href="repairs.html">Repairs</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="biodigester.html">Biodigester Installation</a></li>
+                            <li><a class="dropdown-item" href="waste.html">Waste Management</a></li>
+                            <li><a class="dropdown-item" href="constructions.html">General Constructions</a></li>
+                            <li><a class="dropdown-item" href="plumbing.html">Plumbing</a></li>
+                            <li><a class="dropdown-item" href="drainage.html">Drainage</a></li>
+                            <li><a class="dropdown-item" href="repairs.html">Repairs</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -32,7 +75,7 @@
     <header class="hero bg-primary text-white text-center py-5">
         <div class="container">
             <h1>Welcome to Sure Biodigesters Installers</h1>
-            <p>Your trusted partner in biodigester installation, waste management, and more in Nairobi and Kiambu.</p>
+            <p>Your trusted partner for countrywide biodigester installation, waste management, general constructions, plumbing, drainage, and repair services across Kenya.</p>
             <a href="#services" class="btn btn-light btn-lg">Explore Services</a>
         </div>
     </header>
@@ -47,7 +90,7 @@
                             <i class="fas fa-recycle fa-3x mb-3 text-primary"></i>
                             <h5 class="card-title">Biodigester Installation</h5>
                             <p class="card-text">Efficient and eco-friendly biodigester solutions.</p>
-                            <a href="biodigester.html" class="btn btn-primary">Learn More</a>
+                            <a href="biodigester.html" class="btn btn-primary">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -57,7 +100,7 @@
                             <i class="fas fa-trash-alt fa-3x mb-3 text-primary"></i>
                             <h5 class="card-title">Waste Management</h5>
                             <p class="card-text">Comprehensive waste handling and disposal.</p>
-                            <a href="waste.html" class="btn btn-primary">Learn More</a>
+                            <a href="waste.html" class="btn btn-primary">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +110,7 @@
                             <i class="fas fa-hard-hat fa-3x mb-3 text-primary"></i>
                             <h5 class="card-title">General Constructions</h5>
                             <p class="card-text">Quality construction services for all needs.</p>
-                            <a href="constructions.html" class="btn btn-primary">Learn More</a>
+                            <a href="constructions.html" class="btn btn-primary">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -77,7 +120,7 @@
                             <i class="fas fa-wrench fa-3x mb-3 text-primary"></i>
                             <h5 class="card-title">Plumbing</h5>
                             <p class="card-text">Professional plumbing installations and repairs.</p>
-                            <a href="plumbing.html" class="btn btn-primary">Learn More</a>
+                            <a href="plumbing.html" class="btn btn-primary">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -87,7 +130,7 @@
                             <i class="fas fa-water fa-3x mb-3 text-primary"></i>
                             <h5 class="card-title">Drainage</h5>
                             <p class="card-text">Effective drainage systems design and implementation.</p>
-                            <a href="drainage.html" class="btn btn-primary">Learn More</a>
+                            <a href="drainage.html" class="btn btn-primary">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -97,9 +140,165 @@
                             <i class="fas fa-tools fa-3x mb-3 text-primary"></i>
                             <h5 class="card-title">Repairs</h5>
                             <p class="card-text">Quick and reliable repair services.</p>
-                            <a href="repairs.html" class="btn btn-primary">Learn More</a>
+                            <a href="repairs.html" class="btn btn-primary">View Details</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services-article" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Comprehensive Countrywide Services</h2>
+            
+            <div class="service-details">
+                <h3 id="biodigester">1. Biodigester Installation</h3>
+                <div class="service-features">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Custom-designed biodigester systems for residential and commercial properties</li>
+                        <li>Environmentally friendly waste treatment solutions</li>
+                        <li>Reduces water consumption by up to 90% compared to traditional systems</li>
+                        <li>No need for frequent emptying like septic tanks</li>
+                        <li>Produces biogas that can be used for cooking</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h4>Benefits:</h4>
+                    <ul class="benefits-list">
+                        <li>Eco-friendly solution that protects groundwater from contamination</li>
+                        <li>Low maintenance with no moving parts</li>
+                        <li>Long lifespan (20+ years with proper maintenance)</li>
+                        <li>Cost-effective compared to conventional sewage systems</li>
+                        <li>Eliminates bad odors when properly installed</li>
+                    </ul>
+                    <a href="biodigester.html" class="btn btn-primary mt-3">Learn More About Biodigesters</a>
+                </div>
+            </div>
+
+            <div class="service-details mt-5">
+                <h3 id="waste-management">2. Waste Management Solutions</h3>
+                <div class="service-features">
+                    <h4>Our Services Include:</h4>
+                    <ul>
+                        <li>Solid waste collection and disposal</li>
+                        <li>Liquid waste management</li>
+                        <li>Hazardous waste handling</li>
+                        <li>Recycling programs</li>
+                        <li>Waste audits and consulting</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h4>Why Choose Us:</h4>
+                    <ul class="benefits-list">
+                        <li>Licensed and certified waste management professionals</li>
+                        <li>Compliance with all NEMA regulations</li>
+                        <li>Customized solutions for homes, businesses, and institutions</li>
+                        <li>Environmentally responsible disposal methods</li>
+                        <li>Regular scheduled pickups available</li>
+                    </ul>
+                    <a href="waste.html" class="btn btn-primary mt-3">Explore Waste Management Options</a>
+                </div>
+            </div>
+
+            <div class="service-details mt-5">
+                <h3 id="construction">3. General Construction Services</h3>
+                <div class="service-features">
+                    <h4>Our Construction Capabilities:</h4>
+                    <ul>
+                        <li>Residential building construction</li>
+                        <li>Commercial construction projects</li>
+                        <li>Renovations and remodeling</li>
+                        <li>Structural repairs and maintenance</li>
+                        <li>Project management and supervision</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h4>Our Approach:</h4>
+                    <ul class="benefits-list">
+                        <li>Quality materials from trusted suppliers</li>
+                        <li>Skilled craftsmen with years of experience</li>
+                        <li>Timely project completion</li>
+                        <li>Transparent pricing with no hidden costs</li>
+                        <li>Comprehensive warranty on all work</li>
+                    </ul>
+                    <a href="constructions.html" class="btn btn-primary mt-3">View Construction Projects</a>
+                </div>
+            </div>
+
+            <div class="service-details mt-5">
+                <h3 id="plumbing">4. Professional Plumbing Services</h3>
+                <div class="service-features">
+                    <h4>Plumbing Solutions We Offer:</h4>
+                    <ul>
+                        <li>New plumbing system installation</li>
+                        <li>Pipe repairs and replacements</li>
+                        <li>Water heater installation and repair</li>
+                        <li>Leak detection and repair</li>
+                        <li>Bathroom and kitchen plumbing</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h4>Our Plumbing Advantages:</h4>
+                    <ul class="benefits-list">
+                        <li>24/7 emergency service available</li>
+                        <li>Use of high-quality, durable materials</li>
+                        <li>Water-efficient solutions to reduce bills</li>
+                        <li>Clean, professional workmanship</li>
+                        <li>Guaranteed satisfaction on all work</li>
+                    </ul>
+                    <a href="plumbing.html" class="btn btn-primary mt-3">More Plumbing Services</a>
+                </div>
+            </div>
+
+            <div class="service-details mt-5">
+                <h3 id="drainage">5. Comprehensive Drainage Solutions</h3>
+                <div class="service-features">
+                    <h4>Drainage Services:</h4>
+                    <ul>
+                        <li>Storm water drainage systems</li>
+                        <li>French drain installation</li>
+                        <li>Drain unclogging and cleaning</li>
+                        <li>Land drainage solutions</li>
+                        <li>Drainage system maintenance</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h4>Why Our Drainage Services Stand Out:</h4>
+                    <ul class="benefits-list">
+                        <li>Prevent property damage from water accumulation</li>
+                        <li>Reduce mosquito breeding sites</li>
+                        <li>Improve soil conditions for landscaping</li>
+                        <li>Expert assessment of drainage needs</li>
+                        <li>Long-term solutions, not quick fixes</li>
+                    </ul>
+                    <a href="drainage.html" class="btn btn-primary mt-3">Learn About Drainage Solutions</a>
+                </div>
+            </div>
+
+            <div class="service-details mt-5">
+                <h3 id="repairs">6. Reliable Repair Services</h3>
+                <div class="service-features">
+                    <h4>Our Repair Specialties:</h4>
+                    <ul>
+                        <li>Biodigester system repairs</li>
+                        <li>Plumbing system repairs</li>
+                        <li>Structural repairs</li>
+                        <li>Drainage system repairs</li>
+                        <li>General home/business repairs</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h4>Our Repair Guarantee:</h4>
+                    <ul class="benefits-list">
+                        <li>Prompt response to service calls</li>
+                        <li>Thorough diagnosis of problems</li>
+                        <li>Honest recommendations (repair vs replace)</li>
+                        <li>Quality workmanship that lasts</li>
+                        <li>Warranty on all repair work</li>
+                    </ul>
+                    <a href="repairs.html" class="btn btn-primary mt-3">More About Our Repair Services</a>
                 </div>
             </div>
         </div>
@@ -108,7 +307,8 @@
     <section id="about" class="bg-light py-5">
         <div class="container">
             <h2 class="text-center mb-4">About Us</h2>
-            <p>We are a professional team based in Nairobi and Kiambu, specializing in sustainable solutions for waste and construction needs. With years of experience, we ensure quality and reliability in every project.</p>
+            <p>Sure Biodigesters Installers is a professional team providing services across Kenya. We specialize in sustainable solutions for waste management and construction needs. With years of experience serving clients throughout the country, we ensure quality and reliability in every project.</p>
+            <p>Our mission is to provide environmentally friendly solutions that improve sanitation while reducing ecological impact. We're committed to using the latest technologies and best practices to deliver exceptional results for our clients across all regions of Kenya.</p>
         </div>
     </section>
 
@@ -118,9 +318,9 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <ul class="list-unstyled">
-                        <li><i class="fas fa-phone"></i> Phone/WhatsApp: 0700814628</li>
+                        <li><i class="fas fa-phone"></i> Phone/WhatsApp: +254 700 814 628</li>
                         <li><i class="fas fa-envelope"></i> Email: info@surebiodigestersinstallers.co.ke</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Location: Nairobi, Kiambu</li>
+                        <li><i class="fas fa-globe"></i> Service Area: Countrywide coverage in Kenya</li>
                         <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/share/1CaFEi9j3K/" target="_blank">Facebook</a></li>
                     </ul>
                 </div>
@@ -130,6 +330,7 @@
 
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2025 Sure Biodigesters Installers. All rights reserved.</p>
+        <p>Providing quality services across Kenya.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
